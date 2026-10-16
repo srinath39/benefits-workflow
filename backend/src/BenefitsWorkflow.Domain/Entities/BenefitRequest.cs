@@ -25,4 +25,6 @@ public class BenefitRequest
         return Age>=18;
     }
 
+    public EnumRequestStatus Status {get;set;} =EnumRequestStatus.Submitted;
+
 }

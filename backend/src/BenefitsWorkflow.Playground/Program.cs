@@ -25,5 +25,18 @@
 // Console.Write($"Name is {request.Name} and Age is {request.GetAge()}");
 
 
-INotification notification=new MobileNotification();
-notification.NotificationDevice();
+// INotification notification=new MobileNotification();
+// notification.NotificationDevice();
+
+
+var req1=new BenefitRequest();
+req1.ApplicantName="srinath";
+BenefitRequest.TotalRequests++;
+
+
+var req2=new BenefitRequest();
+req2.ApplicantName="Bala";
+
+Console.WriteLine(req1.ApplicantName);
+Console.WriteLine(req2.ApplicantName);
+Console.WriteLine(BenefitRequest.TotalRequests);

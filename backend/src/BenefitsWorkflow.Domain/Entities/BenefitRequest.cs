@@ -2,6 +2,8 @@ namespace BenefitsWorkflow.Domain.Entities;
 
 public class BenefitRequest
 {
+
+    public static int TotalRequests;
     public int RequestId { get; set; }    // auto property 
 
     public string ApplicantName { get; set; } = string.Empty;

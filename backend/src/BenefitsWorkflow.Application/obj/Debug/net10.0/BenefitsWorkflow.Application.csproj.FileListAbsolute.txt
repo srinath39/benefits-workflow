@@ -1,0 +1,16 @@
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\bin\Debug\net10.0\BenefitsWorkflow.Application.deps.json
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\bin\Debug\net10.0\BenefitsWorkflow.Application.dll
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\bin\Debug\net10.0\BenefitsWorkflow.Application.pdb
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\bin\Debug\net10.0\BenefitsWorkflow.Domain.dll
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\bin\Debug\net10.0\BenefitsWorkflow.Domain.pdb
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.sourcelink.json
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\Benefits.3115BC0D.Up2Date
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.dll
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\refint\BenefitsWorkflow.Application.dll
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.pdb
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\ref\BenefitsWorkflow.Application.dll

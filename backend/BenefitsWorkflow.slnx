@@ -4,5 +4,6 @@
     <Project Path="src/BenefitsWorkflow.Domain/BenefitsWorkflow.Domain.csproj" />
     <Project Path="src/BenefitsWorkflow.Infrastructure/BenefitsWorkflow.Infrastructure.csproj" />
     <Project Path="src/BenefitsWorkflow.Api/BenefitsWorkflow.Api.csproj" />
+    <Project Path="src/BenefitsWorkflow.Playground/BenefitsWorkflow.Playground.csproj" />
   </Folder>
 </Solution>

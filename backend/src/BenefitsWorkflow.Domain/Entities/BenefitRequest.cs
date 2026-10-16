@@ -2,7 +2,7 @@ namespace BenefitsWorkflow.Domain.Entities;
 
 public class BenefitRequest
 {
-    public int RequestId { get; set; }
+    public int RequestId { get; set; } 
 
     public string ApplicantName { get; set; } = string.Empty;
 

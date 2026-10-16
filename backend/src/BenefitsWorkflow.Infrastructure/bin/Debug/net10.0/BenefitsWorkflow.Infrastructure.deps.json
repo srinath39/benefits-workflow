@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "BenefitsWorkflow.Infrastructure/1.0.0": {
+        "dependencies": {
+          "BenefitsWorkflow.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BenefitsWorkflow.Infrastructure.dll": {}
+        }
+      },
+      "BenefitsWorkflow.Domain/1.0.0": {
+        "runtime": {
+          "BenefitsWorkflow.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BenefitsWorkflow.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BenefitsWorkflow.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

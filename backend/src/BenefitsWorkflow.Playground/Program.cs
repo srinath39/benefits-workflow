@@ -2,5 +2,5 @@
 
 BenefitRequest obj=new BenefitRequest();
 
-obj.Age=20;
-Console.WriteLine(obj.Age);
+obj.RequestId=20;
+Console.WriteLine(obj.RequestId);

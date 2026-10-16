@@ -1,0 +1,6 @@
+@BenefitsWorkflow.Api_HostAddress = http://localhost:5189
+
+GET {{BenefitsWorkflow.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

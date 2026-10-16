@@ -1,14 +1,29 @@
 ﻿using BenefitsWorkflow.Domain.Entities;
 
-BenefitRequest obj = new BenefitRequest(56,34)
-{
-    ApplicantName = "BenefitsEngine",
-    MonthlySalary = 70000,
-    HasRequiredDocuments = true
+// var medicalBenefitRequest = new MedicalBenefitRequest();
 
-};
+// medicalBenefitRequest.ApplicantName="srinath";
+// medicalBenefitRequest.HasRequiredDocuments=true;
+// medicalBenefitRequest.MedicalHistory="Has headache";
+
+// Console.WriteLine($"name is {medicalBenefitRequest.ApplicantName} , Documents are present : {medicalBenefitRequest.HasRequiredDocuments} , medical History : {medicalBenefitRequest.MedicalHistory}");
 
 
-string msg=$"the reuest is {obj.RequestId} age is {obj.Age} Application name is {obj.ApplicantName} MonthlySalary is {obj.MonthlySalary} Documets required is {obj.HasRequiredDocuments}";
+// BenefitRequest request=new BenefitRequest()
+// {
+//     // HasRequiredDocuments=false,
+//     Age=20
+// };
 
-Console.WriteLine(msg);
+// Console.WriteLine(request.IsEligible());
+
+
+// AbstractBenefitRequest request=new StandardBenefitRequest()
+// {
+//     Name="Srinath"
+// };
+// Console.Write($"Name is {request.Name} and Age is {request.GetAge()}");
+
+
+INotification notification=new MobileNotification();
+notification.NotificationDevice();

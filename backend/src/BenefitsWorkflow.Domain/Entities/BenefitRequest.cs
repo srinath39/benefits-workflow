@@ -10,12 +10,17 @@ public class BenefitRequest
 
     public decimal MonthlySalary { get; set; }
 
-    public bool HasRequiredDocuments { get; set; }
-
-    public BenefitRequest(int RequestId,int age)  
+    public void UpdateAge(int age)
     {
-        this.RequestId=RequestId;
-        this.Age=age;
-
+        if (age >= 18)
+        {
+            Age=age;
+        }
     }
+
+    public virtual bool IsEligible()
+    {
+        return Age>=18;
+    }
+
 }

@@ -27,4 +27,6 @@ public class BenefitRequest
 
     public EnumRequestStatus Status {get;set;} =EnumRequestStatus.Submitted;
 
+    public Approval? Approval {get;set;}
+
 }

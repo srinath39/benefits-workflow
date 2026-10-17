@@ -50,23 +50,36 @@
 // Console.WriteLine(request.Status);
 
 
-var classRequest=new BenefitRequest()
+// var classRequest=new BenefitRequest()
+// {
+//     Age=20
+// };
+
+// var classRequest2=classRequest;
+// classRequest2.Age=30;
+
+// Console.WriteLine(classRequest.Age);
+
+
+// var structRequest=new BenefitRequestStruct()
+// {
+//     X=10
+// };
+
+// var structRequest2=structRequest;
+// structRequest2.X=20;
+
+// Console.WriteLine(structRequest.X);
+
+
+var request=new BenefitRequest()
 {
-    Age=20
+    RequestId=101,
+    Approval=new Approval()
+    {
+        ApprovedBy="Manager",
+        IsApproved=true
+    }
 };
 
-var classRequest2=classRequest;
-classRequest2.Age=30;
-
-Console.WriteLine(classRequest.Age);
-
-
-var structRequest=new BenefitRequestStruct()
-{
-    X=10
-};
-
-var structRequest2=structRequest;
-structRequest2.X=20;
-
-Console.WriteLine(structRequest.X);
+Console.WriteLine(request.Approval.ApprovedBy);

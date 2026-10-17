@@ -41,10 +41,32 @@
 // Console.WriteLine(req2.ApplicantName);
 // Console.WriteLine(BenefitRequest.TotalRequests);
 
-var request=new BenefitRequest()
+// var request=new BenefitRequest()
+// {
+//     Age=20,
+//     Status=EnumRequestStatus.UnderReview
+// };
+
+// Console.WriteLine(request.Status);
+
+
+var classRequest=new BenefitRequest()
 {
-    Age=20,
-    Status=EnumRequestStatus.UnderReview
+    Age=20
 };
 
-Console.WriteLine(request.Status);
+var classRequest2=classRequest;
+classRequest2.Age=30;
+
+Console.WriteLine(classRequest.Age);
+
+
+var structRequest=new BenefitRequestStruct()
+{
+    X=10
+};
+
+var structRequest2=structRequest;
+structRequest2.X=20;
+
+Console.WriteLine(structRequest.X);

@@ -72,14 +72,19 @@
 // Console.WriteLine(structRequest.X);
 
 
-var request=new BenefitRequest()
-{
-    RequestId=101,
-    Approval=new Approval()
-    {
-        ApprovedBy="Manager",
-        IsApproved=true
-    }
-};
+// var request=new BenefitRequest()
+// {
+//     RequestId=101,
+//     Approval=new Approval()
+//     {
+//         ApprovedBy="Manager",
+//         IsApproved=true
+//     }
+// };
 
-Console.WriteLine(request.Approval.ApprovedBy);
+// Console.WriteLine(request.Approval.ApprovedBy);
+
+var request=new BenefitRequest("srinath",25,100000m);
+request.UpdateAge(30);
+
+Console.WriteLine(request.Age);

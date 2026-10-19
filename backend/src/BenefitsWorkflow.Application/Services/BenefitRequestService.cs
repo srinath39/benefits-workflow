@@ -40,4 +40,18 @@ public class BenefitRequestService : IBenefitRequestService
             Status = request.Status.ToString()
         };
     }
+
+    private List<BenefitRequest> getAllApprovedRequest()
+    {
+        // var approvedRequests=new List<BenefitRequest>();
+        // foreach(var benefitRequest in _requests){
+        //     if (benefitRequest.Status.Equals(EnumRequestStatus.Approved))
+        //     {
+        //         approvedRequests.Add(benefitRequest);
+        //     }
+        // }
+        // return approvedRequests;
+
+        return _requests.Where(request => request.Status.Equals(EnumRequestStatus.Approved)).ToList();
+    }
 }

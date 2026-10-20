@@ -130,11 +130,12 @@
 //     }
 // }
 
+// first matched value is returned, if not match the type default value is returned 
 
-List<int> scores=new List<int>(){102,203,304,402};
+List<int> scores=new List<int>(){10,20,30,40,50};
 
-List<int> fScores=scores.Where(score=>score>250).ToList();
+int hscore=scores.FirstOrDefault(score=>score >25);
+int mscore=scores.FirstOrDefault(score=>score>100);
 
-foreach(int s in fScores){
-    Console.WriteLine(s);
-}
+Console.WriteLine(hscore);
+Console.WriteLine(mscore);

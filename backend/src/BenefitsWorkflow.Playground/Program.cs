@@ -139,17 +139,9 @@ List<BenefitRequest> requests = new(){
     new BenefitRequest("somesh",21,70000m)
 };
 
-List<int> marks = new() { 10, 20, 30, 40 };
+List<String> names=requests.Select(request=>request.ApplicantName).ToList();
 
-// All elements
-Console.WriteLine(marks.Sum());
-
-Console.WriteLine(requests.Sum(request=>request.MonthlySalary));
-
-Console.WriteLine(requests.Where(request=>request.MonthlySalary>50000).Sum(request=>request.MonthlySalary));
-
-// onyl sum elements >10
-// Console.WriteLine(marks.Sum(mark=>mark>10?mark:0));
-
-// this can also be written has 
-Console.WriteLine(marks.Where(marks => marks > 10).Sum());
+foreach(var name in names)
+{
+    Console.WriteLine(name);
+}

@@ -139,9 +139,8 @@ List<BenefitRequest> requests=new (){
     new BenefitRequest("somesh",21,70000m)
 };
 
-var asc=requests.OrderByDescending(score=>score.MonthlySalary).ToList();
+Console.WriteLine(requests.Count());  // .Count -> List memeber , .Count() is LINQ method
 
-foreach(var score in asc)
-{
-    Console.WriteLine(score.MonthlySalary);
-}
+// get count of items only salary >50000
+
+Console.WriteLine(requests.Count(request=>request.MonthlySalary > 50000m));

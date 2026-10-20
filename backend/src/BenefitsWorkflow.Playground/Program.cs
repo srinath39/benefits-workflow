@@ -84,7 +84,48 @@
 
 // Console.WriteLine(request.Approval.ApprovedBy);
 
-var request=new BenefitRequest("srinath",25,100000m);
-request.UpdateAge(30);
+// var request=new BenefitRequest("srinath",25,100000m);
+// request.UpdateAge(30);
 
-Console.WriteLine(request.Age);
+// Console.WriteLine(request.Age);
+
+
+
+// List<decimal> salaries=new() {1000m,45000m,35000m,67000m,23000m};
+// var filterSalaries=salaries.Where(sal=>sal>30000m).ToList();
+
+// foreach(var d in filterSalaries)
+// {
+//     Console.WriteLine(d);
+// }
+
+
+// public class Sample
+// {
+//     public string? name;
+
+//     static void Main()
+//     {
+//         Sample p=new Sample();
+//         Console.WriteLine(p.name);
+//     }
+// }
+
+
+public class Student
+{
+    public int Score;
+
+    static void Main()
+    {
+        var students = new List<Student>(){
+        new Student(){
+            Score=100
+        },new Student()
+        {
+            Score=200
+        }
+        };
+        Console.Write($"Student average score is {students.Average(s=>s.Score)}");
+    }
+}

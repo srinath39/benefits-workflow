@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jefRofLv29I=",
+  "dgSpecHash": "7Y0hoWZ5BDo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\BenefitsWorkflow.Api.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\BenefitsWorkflow.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.13\\microsoft.aspnetcore.openapi.10.0.13.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\BenefitsWorkflow.Api.csproj": {}
+    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\BenefitsWorkflow.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\BenefitsWorkflow.Api.csproj": {
+    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\BenefitsWorkflow.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\BenefitsWorkflow.Api.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\BenefitsWorkflow.Api.csproj",
         "projectName": "BenefitsWorkflow.Api",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\BenefitsWorkflow.Api.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\BenefitsWorkflow.Api.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.Api\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\benefits-workflow\\backend\\src\\BenefitsWorkflow.ApI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"

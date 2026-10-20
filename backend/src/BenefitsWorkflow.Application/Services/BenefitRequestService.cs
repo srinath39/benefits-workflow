@@ -24,15 +24,70 @@ public class BenefitRequestService : IBenefitRequestService
         return MapToResponse(request);
     }
 
+    public RequestResponseDto GetARequestByRequestId(int id)
+    {
+        BenefitRequest? request = _requests.FirstOrDefault(request => request.RequestId == id);
+
+        if (request == null)
+        {
+            throw new KeyNotFoundException($"request id {id} is not found");
+        }
+        return MapToResponse(request);
+    }
+
     public List<RequestResponseDto> GetAllRequests()
     {
         return _requests.Select(MapToResponse).ToList();
     }
 
-    public List<String> ApprovedApplicants()
+    public List<RequestResponseDto> GetApprovedRequests()
     {
-        return _requests.Where(request=>request.Status.Equals(EnumRequestStatus.Approved))
-        .Select(request=>request.ApplicantName).OrderBy(name=>name).ToList();
+        return _requests.Where(request => request.Status == EnumRequestStatus.Approved).OrderBy(request => request.ApplicantName).Select(request =>
+        {
+            return new RequestResponseDto()
+            {
+                RequestId = request.RequestId,
+                ApplicantName = request.ApplicantName,
+                Age = request.Age,
+                MonthlySalary = request.MonthlySalary,
+                Status = request.Status.ToString()
+            };
+        }).ToList();
+    }
+
+    public void StartReview(int id)
+    {
+        BenefitRequest? request = _requests.FirstOrDefault(request => request.RequestId == id);
+
+        if (request == null)
+        {
+            throw new KeyNotFoundException($"request id {id} is not found");
+        }
+        
+        request.StartReview();
+    }
+
+    public void ApproveReview(int id)
+    {
+        BenefitRequest? request = _requests.FirstOrDefault(request => request.RequestId == id);
+
+        if (request == null)
+        {
+            throw new KeyNotFoundException($"request id {id} is not found");
+        }
+        
+        request.Approve();
+    }
+
+    public RequestStatisticsDto GetStatistics()
+    {
+        return new RequestStatisticsDto(){
+            TotalRequests=_requests.Count,
+            SubmittedRequests =_requests.Count(request=>request.Status==EnumRequestStatus.Submitted),
+            UnderReviewRequests = _requests.Count(request=>request.Status==EnumRequestStatus.UnderReview),
+            ApprovedRequests = _requests.Count(request=>request.Status==EnumRequestStatus.Approved),
+            RejectedRequests = _requests.Count(request=>request.Status==EnumRequestStatus.Rejected)
+        };
     }
 
     private static RequestResponseDto MapToResponse(BenefitRequest request)
@@ -47,17 +102,10 @@ public class BenefitRequestService : IBenefitRequestService
         };
     }
 
-    private List<BenefitRequest> getAllApprovedRequest()
+    private List<string> ApprovedApplicants()
     {
-        // var approvedRequests=new List<BenefitRequest>();
-        // foreach(var benefitRequest in _requests){
-        //     if (benefitRequest.Status.Equals(EnumRequestStatus.Approved))
-        //     {
-        //         approvedRequests.Add(benefitRequest);
-        //     }
-        // }
-        // return approvedRequests;
-
-        return _requests.Where(request => request.Status.Equals(EnumRequestStatus.Approved)).ToList();
+        return _requests.Where(request => request.Status.Equals(EnumRequestStatus.Approved))
+        .Select(request => request.ApplicantName).OrderBy(name => name).ToList();
     }
+
 }

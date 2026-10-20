@@ -112,20 +112,29 @@
 // }
 
 
-public class Student
-{
-    public int Score;
+// public class Student
+// {
+//     public int Score;
 
-    static void Main()
-    {
-        var students = new List<Student>(){
-        new Student(){
-            Score=100
-        },new Student()
-        {
-            Score=200
-        }
-        };
-        Console.Write($"Student average score is {students.Average(s=>s.Score)}");
-    }
+//     static void Main()
+//     {
+//         var students = new List<Student>(){
+//         new Student(){
+//             Score=100
+//         },new Student()
+//         {
+//             Score=200
+//         }
+//         };
+//         Console.Write($"Student average score is {students.Average(s=>s.Score)}");
+//     }
+// }
+
+
+List<int> scores=new List<int>(){102,203,304,402};
+
+List<int> fScores=scores.Where(score=>score>250).ToList();
+
+foreach(int s in fScores){
+    Console.WriteLine(s);
 }

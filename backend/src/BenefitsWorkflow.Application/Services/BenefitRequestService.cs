@@ -29,6 +29,12 @@ public class BenefitRequestService : IBenefitRequestService
         return _requests.Select(MapToResponse).ToList();
     }
 
+    public List<String> ApprovedApplicants()
+    {
+        return _requests.Where(request=>request.Status.Equals(EnumRequestStatus.Approved))
+        .Select(request=>request.ApplicantName).OrderBy(name=>name).ToList();
+    }
+
     private static RequestResponseDto MapToResponse(BenefitRequest request)
     {
         return new RequestResponseDto

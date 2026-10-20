@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BenefitsWorkflow.Playground")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93b0fd8b0dcc66b7bc9f9280f3acaa34de089d56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d78b6d2a247cfef86a13b99b1679f79dfb7c45")]
 [assembly: System.Reflection.AssemblyProductAttribute("BenefitsWorkflow.Playground")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BenefitsWorkflow.Playground")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

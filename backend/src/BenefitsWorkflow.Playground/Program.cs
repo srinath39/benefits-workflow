@@ -132,10 +132,16 @@
 
 // first matched value is returned, if not match the type default value is returned 
 
-List<int> scores=new List<int>(){10,20,30,40,50};
 
-bool a=scores.Any(score=>score>30);
-bool b=scores.Any(score=>score>100);
+List<BenefitRequest> requests=new (){
+    new BenefitRequest("srinath",25,60000m),
+    new BenefitRequest("balashiva",26,40000m),
+    new BenefitRequest("somesh",21,70000m)
+};
 
-Console.WriteLine(a);
-Console.WriteLine(b);
+var asc=requests.OrderByDescending(score=>score.MonthlySalary).ToList();
+
+foreach(var score in asc)
+{
+    Console.WriteLine(score.MonthlySalary);
+}

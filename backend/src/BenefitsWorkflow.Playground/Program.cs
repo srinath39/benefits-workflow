@@ -134,8 +134,8 @@
 
 List<int> scores=new List<int>(){10,20,30,40,50};
 
-int hscore=scores.FirstOrDefault(score=>score >25);
-int mscore=scores.FirstOrDefault(score=>score>100);
+bool a=scores.Any(score=>score>30);
+bool b=scores.Any(score=>score>100);
 
-Console.WriteLine(hscore);
-Console.WriteLine(mscore);
+Console.WriteLine(a);
+Console.WriteLine(b);

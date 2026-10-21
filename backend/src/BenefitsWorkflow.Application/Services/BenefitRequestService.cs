@@ -80,8 +80,8 @@ public class BenefitRequestService : IBenefitRequestService
     }
 
     public RequestStatisticsDto GetStatistics()
-    {
-        return new RequestStatisticsDto(){
+    { 
+       return new RequestStatisticsDto(){
             TotalRequests=_requests.Count,
             SubmittedRequests =_requests.Count(request=>request.Status==EnumRequestStatus.Submitted),
             UnderReviewRequests = _requests.Count(request=>request.Status==EnumRequestStatus.UnderReview),

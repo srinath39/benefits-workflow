@@ -21,7 +21,7 @@ public class BenefitRequestsController : ControllerBase
         var result = _service.CreateRequest(dto);
 
         return CreatedAtAction(
-            nameof(GetAll),
+            nameof(GetARequestById),
             new { id = result.RequestId },
             result);
     }
@@ -33,12 +33,6 @@ public class BenefitRequestsController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<RequestResponseDto> GetARequestByIdQuery([FromQuery] int id)
-    {
-        return Ok(_service.GetARequestByRequestId(id));
-    }
-
-    [HttpGet("all")]
     public ActionResult<List<RequestResponseDto>> GetAll()
     {
         return Ok(_service.GetAllRequests());

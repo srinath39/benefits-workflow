@@ -32,15 +32,17 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
 app.UseHttpsRedirection();
 
 if (app.Environment.IsDevelopment())
 {
+    app.MapOpenApi();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint(
+            "/openapi/v1.json",
+            "My Workflow Application");
+    });
     app.UseCors("FrontendDevelopment");
 }
 

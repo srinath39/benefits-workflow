@@ -38,3 +38,4 @@ C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.A
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Api\obj\Debug\net10.0\BenefitsWorkflow.Api.pdb
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Api\obj\Debug\net10.0\BenefitsWorkflow.Api.genruntimeconfig.cache
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Api\obj\Debug\net10.0\ref\BenefitsWorkflow.Api.dll
+C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.ApI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -7,9 +7,11 @@
 - Day 1 C# fundamentals: completed in lessons (console eligibility exercise, types, control flow, methods, arrays, validation, `const`/`readonly`).
 - Day 2 OOP/API foundations: completed in lessons (domain entity, DTO, services, DI, controller, workflow endpoints).
 - Day 3 LINQ: completed exercises (`List<T>`, `Where`, `FirstOrDefault`, `Any`, `OrderBy`, `OrderByDescending`, `Count`, `Sum`, `Select`, DTO projection).
-- Day 3 React dashboard integration: implemented and verified in the browser against the local API. Statistics and request-list failures are handled independently; a simulated request-list failure displayed a dismissible alert while statistics remained visible.
+- Day 3 React dashboard integration: implemented and browser-verified against the backend directly, without a Vite proxy. Statistics and request-list failures are handled independently; a simulated request-list failure displayed a dismissible alert while statistics remained visible.
 - Backend build: `dotnet build backend\BenefitsWorkflow.slnx --no-restore` succeeded with 0 warnings and 0 errors.
 - Frontend verification: `npm run build` and `npm run lint` succeeded in `frontend/`.
+- CORS verification: the allowed Vite origin received `Access-Control-Allow-Origin`; an OPTIONS preflight returned 204 with requested method/header; an unrelated origin received no CORS allow-origin header.
+- Frontend API URL configuration: `VITE_API_BASE_URL` is set in the local `frontend/.env`, which is ignored by `frontend/.gitignore`; the frontend reads it through Vite's `import.meta.env`.
 - Database: not yet connected; temporary in-memory storage.
 
 ## Relevant repository layout
@@ -59,10 +61,12 @@ benefits-workflow/
 | GET | `/api/BenefitRequests/statistics` | Browser verified through Vite proxy |
 
 ## Known gaps and cautions
-- The frontend uses Tailwind CSS v4 through its Vite plugin and a Vite development proxy to the API's configured HTTP URL (`http://localhost:5189`); this avoids browser CORS and HTTPS certificate issues during local development.
+- The frontend uses Tailwind CSS v4 through its Vite plugin and calls `http://localhost:5189` directly. Vite has no API proxy configured. The ASP.NET Core Development CORS policy permits only the local Vite origins on ports 5173 and 5174 (localhost and 127.0.0.1).
+- Direct local HTTP was selected because the installed localhost HTTPS development certificate is not trusted in this environment. Use HTTPS and an appropriate production origin policy outside local development; do not send credentials over the local HTTP setup.
 - The dashboard loads statistics and the request list independently with `Promise.allSettled`, shows a dismissible alert and retry action for list failures, and includes loading, error, and empty states.
 - The request table does not display salary. The existing API response DTO still contains salary, so authorization and data minimization need review before exposing the API outside local development.
-- The Vite proxy is development-only; deployment will need an API base URL/reverse-proxy configuration.
+- The API base URL can be overridden with `VITE_API_BASE_URL`; deployment must supply an HTTPS API URL and configure the corresponding allowed frontend origin.
+- Vite `VITE_` variables are compiled into browser code and are not secret; only put non-sensitive configuration such as the API URL there.
 - Swagger test requests are lost when the API process restarts.
 - Rejection API, editing, withdraw, filtering/pagination, DB, auth, audit, uploads, notifications, tests, deployment: planned, not verified.
 - Global exception mapping for not found / invalid transitions is pending.
@@ -72,7 +76,7 @@ benefits-workflow/
 ## Immediate next task
 1. Continue Day 4: learn exception flow and predictable HTTP error responses (400/404/409).
 2. Add API error handling and test missing requests and invalid status transitions.
-3. Configure a production API route before deployment; the current Vite proxy is development-only.
+3. Review HTTPS/CORS configuration and sensitive response fields before exposing the API outside local development.
 
 ## Definition of done for a feature
 - Compiles / lints as applicable.

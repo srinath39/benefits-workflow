@@ -1,4 +1,5 @@
-const benefitRequestsUrl = '/api/BenefitRequests'
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
+const benefitRequestsUrl = `${apiBaseUrl}/api/BenefitRequests`
 
 async function getJson(url) {
   const response = await fetch(url)

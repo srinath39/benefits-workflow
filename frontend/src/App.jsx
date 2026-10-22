@@ -17,7 +17,7 @@ const statusStyles = {
 }
 
 function fetchDashboardData() {
-  return Promise.allSettled([
+  return Promise.allSettled([   // runs multiple promises and waits until all promises returns something 
     getRequestStatistics(),
     getBenefitRequests(),
   ])

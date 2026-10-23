@@ -26,6 +26,9 @@ public class BenefitRequestService : IBenefitRequestService
 
     public RequestResponseDto GetARequestByRequestId(int id)
     {
+        int a=10;
+        int b=0;
+        int c=a/b;
         BenefitRequest? request = _requests.FirstOrDefault(request => request.RequestId == id);
 
         if (request == null)

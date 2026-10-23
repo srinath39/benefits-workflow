@@ -14,3 +14,6 @@ C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.A
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\refint\BenefitsWorkflow.Application.dll
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\BenefitsWorkflow.Application.pdb
 C:\Users\ADMIN\OneDrive\Desktop\benefits-workflow\backend\src\BenefitsWorkflow.Application\obj\Debug\net10.0\ref\BenefitsWorkflow.Application.dll
+C:\Users\ADMIN\AppData\Local\Temp\benefits-workflow-exception-build\Debug\net10.0\BenefitsWorkflow.Application.deps.json
+C:\Users\ADMIN\AppData\Local\Temp\benefits-workflow-exception-build\Debug\net10.0\BenefitsWorkflow.Application.dll
+C:\Users\ADMIN\AppData\Local\Temp\benefits-workflow-exception-build\Debug\net10.0\BenefitsWorkflow.Application.pdb

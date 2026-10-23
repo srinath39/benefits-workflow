@@ -1,5 +1,6 @@
 using BenefitsWorkflow.Application.Interfaces;
 using BenefitsWorkflow.Application.Services;
+using BenefitsWorkflow.Api.ExceptionHandling;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddExceptionHandler<ApiExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 builder.Services.AddCors(options =>
 {
@@ -31,6 +34,8 @@ builder.Services.AddSingleton<IBenefitRequestService, BenefitRequestService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

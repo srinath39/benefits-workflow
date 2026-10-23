@@ -1,9 +1,9 @@
 # Project Progress — Benefits Workflow Management
 
-> Last context update: 2026-10-21. Source code and the local dashboard integration were inspected and verified for the progress recorded below.
+> Last context update: 2026-10-22. Source code and local API behavior were verified for the progress recorded below.
 
 ## Status snapshot
-- Learning position: Day 3 of an 18-day intensive plan; dashboard integration is now verified.
+- Learning position: Day 4 of an 18-day intensive plan; centralized API exception handling is implemented and verified.
 - Day 1 C# fundamentals: completed in lessons (console eligibility exercise, types, control flow, methods, arrays, validation, `const`/`readonly`).
 - Day 2 OOP/API foundations: completed in lessons (domain entity, DTO, services, DI, controller, workflow endpoints).
 - Day 3 LINQ: completed exercises (`List<T>`, `Where`, `FirstOrDefault`, `Any`, `OrderBy`, `OrderByDescending`, `Count`, `Sum`, `Select`, DTO projection).
@@ -12,6 +12,8 @@
 - Frontend verification: `npm run build` and `npm run lint` succeeded in `frontend/`.
 - CORS verification: the allowed Vite origin received `Access-Control-Allow-Origin`; an OPTIONS preflight returned 204 with requested method/header; an unrelated origin received no CORS allow-origin header.
 - Frontend API URL configuration: `VITE_API_BASE_URL` is set in the local `frontend/.env`, which is ignored by `frontend/.gitignore`; the frontend reads it through Vite's `import.meta.env`.
+- API exception handling: `KeyNotFoundException` maps to 404, `ArgumentException` to 400, `InvalidOperationException` to 409, and unexpected exceptions to a generic 500 Problem Details response with server-side error logging.
+- Exception handling verification: the solution built successfully in an isolated output directory; live HTTP requests verified 404 for a missing request, 201 for valid creation, 409 for approval before review, and 400 for invalid applicant age. Error responses use `application/problem+json` and contain a trace ID.
 - Database: not yet connected; temporary in-memory storage.
 
 ## Relevant repository layout
@@ -53,8 +55,8 @@ benefits-workflow/
 | HTTP | Route | Reported status |
 |---|---|---|
 | POST | `/api/BenefitRequests` | Tested in Swagger |
-| GET | `/api/BenefitRequests` | Implemented as list route; browser verified through Vite proxy |
-| GET | `/api/BenefitRequests/{id}` | Implemented |
+| GET | `/api/BenefitRequests` | Implemented as list route; browser verified against backend directly |
+| GET | `/api/BenefitRequests/{id}` | Implemented; missing-ID response verified as 404 |
 | PUT | `/api/BenefitRequests/{id}/start-review` | Tested in Swagger |
 | PUT | `/api/BenefitRequests/{id}/approve` | Tested in Swagger |
 | GET | `/api/BenefitRequests/approved` | Tested in Swagger |
@@ -69,13 +71,13 @@ benefits-workflow/
 - Vite `VITE_` variables are compiled into browser code and are not secret; only put non-sensitive configuration such as the API URL there.
 - Swagger test requests are lost when the API process restarts.
 - Rejection API, editing, withdraw, filtering/pagination, DB, auth, audit, uploads, notifications, tests, deployment: planned, not verified.
-- Global exception mapping for not found / invalid transitions is pending.
+- Unexpected server errors return a generic message; detailed exceptions are logged by the API handler.
 - POST now points `CreatedAtAction` to the get-by-ID route.
 - Concurrency, sensitive field exposure and proper role checks must be addressed before production use.
 
 ## Immediate next task
-1. Continue Day 4: learn exception flow and predictable HTTP error responses (400/404/409).
-2. Add API error handling and test missing requests and invalid status transitions.
+1. Continue Day 4 by exploring nullable reference types and model validation.
+2. Add focused automated tests for domain transitions and API error contracts when the test project is introduced.
 3. Review HTTPS/CORS configuration and sensitive response fields before exposing the API outside local development.
 
 ## Definition of done for a feature

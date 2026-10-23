@@ -1,3 +1,5 @@
+using BenefitsWorkflow.Domain.Exceptions;
+
 namespace BenefitsWorkflow.Domain.Entities;
 
 public class BenefitRequest
@@ -61,7 +63,7 @@ public class BenefitRequest
     {
         if (Status != EnumRequestStatus.Submitted)
         {
-            throw new InvalidOperationException(
+            throw new InvalidBenefitRequestStateException(
                 "Only submitted requests can enter review.");
         }
 
@@ -72,7 +74,7 @@ public class BenefitRequest
     {
         if (Status != EnumRequestStatus.UnderReview)
         {
-            throw new InvalidOperationException(
+            throw new InvalidBenefitRequestStateException(
                 "Only requests under review can be approved.");
         }
 
@@ -83,7 +85,7 @@ public class BenefitRequest
     {
         if (Status != EnumRequestStatus.UnderReview)
         {
-            throw new InvalidOperationException(
+            throw new InvalidBenefitRequestStateException(
                 "Only requests under review can be rejected.");
         }
 
@@ -94,7 +96,7 @@ public class BenefitRequest
     {
         if (RequestId != 0)
         {
-            throw new InvalidOperationException(
+            throw new InvalidBenefitRequestStateException(
                 "Request ID has already been assigned.");
         }
         if (requestId <= 0)

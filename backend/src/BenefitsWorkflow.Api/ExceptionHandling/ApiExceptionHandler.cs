@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Diagnostics;
+using BenefitsWorkflow.Domain.Exceptions;
 
 namespace BenefitsWorkflow.Api.ExceptionHandling;
 
@@ -24,6 +25,10 @@ public sealed class ApiExceptionHandler(ILogger<ApiExceptionHandler> logger) : I
                 StatusCodes.Status400BadRequest,
                 "Invalid request",
                 "The request contains invalid data."),
+            InvalidBenefitRequestStateException => (
+                StatusCodes.Status409Conflict,
+                "Invalid workflow state",
+                "The operation conflicts with the worflow transition operation."),
             InvalidOperationException => (
                 StatusCodes.Status409Conflict,
                 "Request conflict",

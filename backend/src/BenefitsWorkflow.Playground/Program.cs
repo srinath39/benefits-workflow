@@ -133,15 +133,32 @@
 // first matched value is returned, if not match the type default value is returned 
 
 
-List<BenefitRequest> requests = new(){
-    new BenefitRequest("srinath",25,60000m),
-    new BenefitRequest("balashiva",26,40000m),
-    new BenefitRequest("somesh",21,70000m)
-};
+// List<BenefitRequest> requests = new(){
+//     new BenefitRequest("srinath",25,60000m),
+//     new BenefitRequest("balashiva",26,40000m),
+//     new BenefitRequest("somesh",21,70000m)
+// };
 
-List<String> names=requests.Select(request=>request.ApplicantName).ToList();
+// List<String> names=requests.Select(request=>request.ApplicantName).ToList();
 
-foreach(var name in names)
+// foreach(var name in names)
+// {
+//     Console.WriteLine(name);
+// }
+
+
+try
 {
-    Console.WriteLine(name);
+    throw new Exception("Divide by zero exception caught");
+}
+catch(DivideByZeroException ex)
+{
+    Console.WriteLine(ex.Message);
+}catch(Exception ex)
+{
+    Console.WriteLine("General Exception caught");
+}
+finally
+{
+    Console.WriteLine("Runs in both success and failed state");
 }

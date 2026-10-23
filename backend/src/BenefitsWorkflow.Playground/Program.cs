@@ -173,14 +173,45 @@
 // }
 
 
-var y=(a:20,name:"srinath",salary:"7000.00");
-Console.WriteLine(y.a);
+// var y=(a:20,name:"srinath",salary:"7000.00");
+// Console.WriteLine(y.a);
 
 
-var t=(20,"srinath",3000.00);
-Console.WriteLine(t.Item1);
+// var t=(20,"srinath",3000.00);
+// Console.WriteLine(t.Item1);
 
 
-var (id,name,salary)=t;
-Console.WriteLine(id);
+// var (id,name,salary)=t;
+// Console.WriteLine(id);
  
+
+
+
+// var name="bala";
+// var marks = name switch
+// {
+//     "srinath"=>23.90,
+//     "bala"=>45.67,
+//     "somesh"=>56.89,
+//     _=>67.34
+// };
+// Console.WriteLine(marks);
+
+var name="bala";
+double marks;
+switch (name)
+{
+    case "srinath":
+        marks=23.50;
+        break;
+    case "bala":
+        marks=56.78;
+        break;
+    case "somesh":
+        marks=67.89;
+        break;
+    default:
+        marks=78.90;
+        break;
+}
+Console.WriteLine(marks);

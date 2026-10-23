@@ -147,18 +147,40 @@
 // }
 
 
-try
-{
-    throw new Exception("Divide by zero exception caught");
-}
-catch(DivideByZeroException ex)
-{
-    Console.WriteLine(ex.Message);
-}catch(Exception ex)
-{
-    Console.WriteLine("General Exception caught");
-}
-finally
-{
-    Console.WriteLine("Runs in both success and failed state");
-}
+// try
+// {
+//     throw new Exception("Divide by zero exception caught");
+// }
+// catch(DivideByZeroException ex)
+// {
+//     Console.WriteLine(ex.Message);
+// }catch(Exception ex)
+// {
+//     Console.WriteLine("General Exception caught");
+// }
+// finally
+// {
+//     Console.WriteLine("Runs in both success and failed state");
+// // }
+
+
+// try
+// {
+//     throw new BenefitRequestIdNotFoundException(23);
+// }catch(BenefitRequestIdNotFoundException ex)
+// {
+//     Console.WriteLine(ex.Message);
+// }
+
+
+var y=(a:20,name:"srinath",salary:"7000.00");
+Console.WriteLine(y.a);
+
+
+var t=(20,"srinath",3000.00);
+Console.WriteLine(t.Item1);
+
+
+var (id,name,salary)=t;
+Console.WriteLine(id);
+ 

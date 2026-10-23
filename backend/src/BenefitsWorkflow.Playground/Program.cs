@@ -197,21 +197,29 @@
 // };
 // Console.WriteLine(marks);
 
-var name="bala";
-double marks;
-switch (name)
+// var name="bala";
+// double marks;
+// switch (name)
+// {
+//     case "srinath":
+//         marks=23.50;
+//         break;
+//     case "bala":
+//         marks=56.78;
+//         break;
+//     case "somesh":
+//         marks=67.89;
+//         break;
+//     default:
+//         marks=78.90;
+//         break;
+// }
+// Console.WriteLine(marks);
+
+
+void Display(string name,int age)
 {
-    case "srinath":
-        marks=23.50;
-        break;
-    case "bala":
-        marks=56.78;
-        break;
-    case "somesh":
-        marks=67.89;
-        break;
-    default:
-        marks=78.90;
-        break;
+    Console.WriteLine($"My name is {name} and my age {age}");
 }
-Console.WriteLine(marks);
+
+Display(age:34,name:"srinath");
